@@ -12,8 +12,8 @@ function flash() {
   count++;
   fs.writeFileSync(gpio2 + '/value', count % 2);
 
-  if (count <= 20) {
-    setTimeout(flash, 500);
+  if (count <= 10) {
+    setTimeout(flash, 2000);
   } else {
     fs.writeFileSync(dir + '/unexport', 2); // 処理の終了
   }
